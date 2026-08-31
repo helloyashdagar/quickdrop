@@ -18,15 +18,11 @@ export default function Header() {
       <div className="h-full flex items-center justify-between px-4 max-w-[430px] mx-auto relative">
         {/* Left: Logo */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-[#1A2A3A] flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 80 80">
-              <path d="M28 24 L28 40 Q28 48 36 48 L44 48 Q52 48 52 40 L52 24" stroke="#FF6B35" strokeWidth="5" fill="none" strokeLinecap="round" />
-              <path d="M20 44 L28 36 L40 44 L52 36 L60 44" stroke="#FF6B35" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="40" cy="40" r="4" fill="#FF6B35" />
-            </svg>
+          <div className="flex items-center justify-center overflow-hidden rounded-lg h-12 max-h-none w-auto flex-shrink-0 bg-transparent">
+            <img src="/logo-home.ico" alt="Quick Drop" className="h-12 w-auto max-h-none object-contain flex-shrink-0" />
           </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-sm font-bold text-[#1A1A2E] tracking-tight">Trusted Relay</span>
+          <div className="flex flex-col leading-none justify-center">
+            <span className="text-sm font-bold text-[#1A1A2E] tracking-tight">Quick Drop</span>
             <span className="text-[9px] text-[#9A9A9E] font-medium tracking-wider uppercase">Peer Delivery</span>
           </div>
         </div>

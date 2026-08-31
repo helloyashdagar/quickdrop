@@ -42,8 +42,8 @@ export default function ProfileContainer() {
           </div>
         </div>
 
-        <h2 className="text-lg font-bold text-[#1A1A2E]">Mohammad Irfan</h2>
-        <p className="text-xs text-[#9A9A9E] mt-0.5">@irfan_iitb</p>
+        <h2 className="text-lg font-bold text-[#1A1A2E]">Yash</h2>
+        <p className="text-xs text-[#9A9A9E] mt-0.5">@yash_iitb</p>
 
         {/* Trust Score */}
         <div className="mt-3 flex items-center gap-2 px-4 py-2 rounded-full bg-[#F0EDE9]">
@@ -184,7 +184,7 @@ export default function ProfileContainer() {
 
       {/* App Version */}
       <div className="text-center pb-2">
-        <p className="text-[10px] text-[#9A9A9E] font-mono">Trusted Relay v2.4.1</p>
+        <p className="text-[10px] text-[#9A9A9E] font-mono">Quick Drop v2.4.1</p>
       </div>
     </div>
   );

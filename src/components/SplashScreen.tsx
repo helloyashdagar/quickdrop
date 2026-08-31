@@ -8,7 +8,7 @@ interface SplashScreenProps {
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [progress, setProgress] = useState(0);
   const [tagline, setTagline] = useState('');
-  const fullTagline = 'TRUST. MOVES. FASTER.';
+  const fullTagline = 'DROP. FASTER.';
 
   useEffect(() => {
     const milestones = [0, 30, 70, 95, 100];
@@ -55,40 +55,26 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       <div className="relative flex flex-col items-center gap-8">
         {/* Logo with stroke animation */}
         <div className="relative">
-          <svg width="80" height="80" viewBox="0 0 80 80" className="relative z-10">
-            <motion.path
-              d="M28 24 L28 40 Q28 48 36 48 L44 48 Q52 48 52 40 L52 24"
-              stroke="#FF6B35"
-              strokeWidth="5"
-              fill="none"
-              strokeLinecap="round"
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ duration: 1.5, ease: 'easeInOut', delay: 0.2 }}
-            />
-            <motion.path
-              d="M20 44 L28 36 L40 44 L52 36 L60 44"
-              stroke="#FF6B35"
-              strokeWidth="4"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.6 }}
-            />
-            <motion.circle
-              cx="40"
-              cy="40"
-              r="4"
-              fill="#FF6B35"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.4, ease: 'backOut', delay: 1.5 }}
-            />
-          </svg>
+          <motion.img
+            src="/logo-start.ico"
+            alt="Quick Drop"
+            className="relative z-10 w-56 h-56 object-contain rounded-2xl"
+            initial={{ scale: 0.8, opacity: 0, x: -10, rotate: -3 }}
+            animate={{ scale: 1, opacity: 1, x: 0, rotate: 0, y: [0, -4, 0] }}
+            transition={{
+              duration: 0.6,
+              ease: 'easeOut',
+              delay: 0.2,
+              y: {
+                duration: 1.6,
+                repeat: Infinity,
+                repeatType: 'mirror',
+                ease: 'easeInOut',
+              },
+            }}
+          />
           <motion.div
-            className="absolute -inset-3 rounded-full"
+            className="absolute inset-4 rounded-full"
             style={{ border: '2px solid rgba(255, 107, 53, 0.2)' }}
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -104,7 +90,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.5 }}
           >
-            Trusted Relay
+            Quick Drop
           </motion.h1>
           <div className="mt-2 h-6 flex items-center justify-center">
             <span className="font-mono text-xs tracking-[0.3em] text-[#FF6B35] uppercase">
